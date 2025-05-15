@@ -2,12 +2,17 @@
 📜 Public Trust Record:  
 ➡️ [View Live Site](https://william-ray-el-allodial-estate.github.io/WRW-Trust-Public/)
 <p align="center">
-  <img src="https://raw.githubusercontent.com/william-ray-El-Allodial-Estate/WRW-Trust-Public/main/WILLIAM_RAYEH_WATLEY_CREST.png" alt="WRW Crest" width="240" />
+  <a href="https://william-ray-el-allodial-estate.github.io/WRW-Trust-Public/">
+    <img src="https://raw.githubusercontent.com/william-ray-El-Allodial-Estate/WRW-Trust-Public/main/trust_crest_WRW.png" alt="WRW Crest" width="200" />
+  </a>
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/william-ray-El-Allodial-Estate/WRW-Trust-Public/main/WILLIAM_RAYEH_WATLEY_SEAL.png" alt="WRW Seal" width="200" />
+  <img src="https://raw.githubusercontent.com/william-ray-El-Allodial-Estate/WRW-Trust-Public/main/trust_seal.png.png" alt="WRW Seal" width="180" />
 </p>
+
+<h3 align="center">WILLIAM RAYEH WATLEY TRUST</h3>
+<p align="center"><em>Private Treaty Trust • Allodium Moroccan Praedium Ante Michigan • WYNN-WATLEY Lineage</em></p>
 
 <h3 align="center">WILLIAM RAYEH WATLEY TRUST</h3>
 <p align="center"><em>Private Treaty Trust • Allodium Moroccan Praedium Ante Michigan • WYNN-WATLEY Lineage</em></p>
