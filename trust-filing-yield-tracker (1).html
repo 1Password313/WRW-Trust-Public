@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trust Filing & Yield Tracker Bot</title>
+  <style>
+    body { font-family: Georgia, serif; background: #f9f9f9; padding: 2em; color: #222; }
+    h1 { text-align: center; font-size: 2em; margin-bottom: 0.5em; }
+    .tabs { display: flex; justify-content: center; margin-bottom: 1em; }
+    .tab { margin: 0 10px; padding: 10px 20px; background: #000; color: #fff; border-radius: 5px; cursor: pointer; }
+    .tab.active { background: #444; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
+    th, td { border: 1px solid #aaa; padding: 8px; text-align: left; }
+    th { background: #eee; }
+    button { margin-bottom: 10px; padding: 5px 10px; font-weight: bold; }
+    td[contenteditable] { background: #fff; }
+  </style>
+</head>
+<body>
+  <h1>Trust Filing & Yield Tracker Bot</h1>
+
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab(0)">Trust Filings</div>
+    <div class="tab" onclick="switchTab(1)">Yield Ledger</div>
+    <div class="tab" onclick="switchTab(2)">IRS Form 8281</div>
+    <div class="tab" onclick="switchTab(3)">Mail Tracker</div>
+  </div>
+
+  <div id="contents">
+    <div class="tab-content active">
+      <button onclick="addRow('filingTable')">+ Add Filing Row</button>
+      <table id="filingTable">
+        <tr><th>Date</th><th>Entity</th><th>Instrument Type</th><th>Reference No.</th><th>Status</th><th>Notes</th></tr>
+      </table>
+    </div>
+    <div class="tab-content">
+      <button onclick="addRow('yieldTable')">+ Add Yield Row</button>
+      <table id="yieldTable">
+        <tr><th>Date</th><th>Instrument</th><th>Yield %</th><th>Amount</th><th>Distribution Method</th><th>Notes</th></tr>
+      </table>
+    </div>
+    <div class="tab-content">
+      <button onclick="addRow('irsTable')">+ Add 8281 Row</button>
+      <table id="irsTable">
+        <tr><th>Submission Date</th><th>Bond ID</th><th>Issuer</th><th>OID Amount</th><th>Tracking No.</th><th>Status</th></tr>
+      </table>
+    </div>
+    <div class="tab-content">
+      <button onclick="addRow('mailTable')">+ Add Mail Row</button>
+      <table id="mailTable">
+        <tr><th>Date Sent</th><th>Recipient</th><th>Address</th><th>Tracking No.</th><th>Type</th><th>Status</th></tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function switchTab(index) {
+      document.querySelectorAll('.tab').forEach((t, i) => {
+        t.classList.toggle('active', i === index);
+        document.querySelectorAll('.tab-content')[i].classList.toggle('active', i === index);
+      });
+    }
+
+    function addRow(tableId) {
+      const table = document.getElementById(tableId);
+      const row = table.insertRow();
+      const cellCount = table.rows[0].cells.length;
+      for (let i = 0; i < cellCount; i++) {
+        const cell = row.insertCell(i);
+        cell.contentEditable = true;
+      }
+    }
+  </script>
+</body>
+</html>
