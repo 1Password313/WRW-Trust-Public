@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WRW Trust Filing & Yield Tracker</title>
+  <style>
+    body { font-family: Georgia, serif; margin: 0; padding: 0; background: #f4f4f4; }
+    nav { background: #222; color: white; padding: 1em; display: flex; justify-content: space-around; }
+    nav button { background: #444; color: white; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold; border-radius: 5px; }
+    nav button:hover { background: #666; }
+    section { display: none; padding: 20px; }
+    section.active { display: block; }
+    h1 { text-align: center; padding: 20px; background: #222; color: white; margin: 0; }
+    textarea, input[type=text], input[type=date] { width: 100%; padding: 10px; margin: 10px 0; font-size: 1em; border: 1px solid #ccc; border-radius: 5px; }
+    .log-entry { margin-bottom: 1em; padding: 10px; background: #fff; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+  <h1>WRW Trust Filing & Yield Tracker</h1>
+  <nav>
+    <button onclick="showTab('filings')">Trust Filings</button>
+    <button onclick="showTab('1099')">1099/OID Log</button>
+    <button onclick="showTab('form8281')">Form 8281</button>
+    <button onclick="showTab('mail')">Mail Tracking</button>
+    <button onclick="showTab('letters')">Follow-Up Letters</button>
+    <button onclick="showTab('affidavits')">Affidavit Bundles</button>
+  </nav>
+
+  <section id="filings" class="active">
+    <h2>Trust Filings</h2>
+    <input type="text" placeholder="Filing Title or Instrument">
+    <input type="date">
+    <textarea placeholder="Details of the filing..."></textarea>
+  </section>
+
+  <section id="1099">
+    <h2>1099/OID Log</h2>
+    <input type="text" placeholder="Entity or Recipient">
+    <input type="date">
+    <textarea placeholder="1099/OID details, amounts, or notes..."></textarea>
+  </section>
+
+  <section id="form8281">
+    <h2>Form 8281 Submissions</h2>
+    <input type="text" placeholder="Bond Name or Instrument">
+    <input type="date">
+    <textarea placeholder="Form 8281 details or CUSIP/LEI numbers..."></textarea>
+  </section>
+
+  <section id="mail">
+    <h2>Mail Tracking Ledger</h2>
+    <input type="text" placeholder="Recipient or Agency">
+    <input type="text" placeholder="Tracking Number">
+    <input type="date">
+    <textarea placeholder="Purpose or contents of mailing..."></textarea>
+  </section>
+
+  <section id="letters">
+    <h2>Follow-Up Letters</h2>
+    <input type="text" placeholder="Recipient or Entity">
+    <input type="date">
+    <textarea placeholder="Content summary, responses, or actions..."></textarea>
+  </section>
+
+  <section id="affidavits">
+    <h2>Affidavit Bundles</h2>
+    <input type="text" placeholder="Affidavit Title or Related Matter">
+    <input type="date">
+    <textarea placeholder="Affidavit or attachment details..."></textarea>
+  </section>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll("section").forEach(section => {
+        section.classList.remove("active");
+      });
+      document.getElementById(tabId).classList.add("active");
+    }
+  </script>
+</body>
+</html>
