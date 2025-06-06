@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WRW Trust Tool Dashboard</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      background: #333;
+      overflow-x: auto;
+    }
+    nav a {
+      flex: 1;
+      padding: 1em;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+      border-right: 1px solid #444;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    iframe {
+      width: 100%;
+      height: calc(100vh - 140px);
+      border: none;
+    }
+    footer {
+      background: #222;
+      color: #aaa;
+      padding: 0.5em;
+      text-align: center;
+      font-size: 0.9em;
+    }
+  </style>
+  <script>
+    function loadTool(path) {
+      document.getElementById('toolFrame').src = path;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>⚖️ WRW Trust Tool Dashboard</h1>
+    <p>AMPAM Treaty Tools • Private Trust Instruments • Sovereign Filings</p>
+  </header>
+  <nav>
+    <a href="#" onclick="loadTool('Universal-Instrument-Maker/instrument-maker.html')">📄 Instrument Maker</a>
+    <a href="#" onclick="loadTool('WRW-Creditor-Console/index.html')">🤖 Creditor Console</a>
+    <a href="#" onclick="loadTool('Trust-Scrubber/index.html')">🧹 Trust Scrubber</a>
+    <a href="#" onclick="loadTool('Yield-Tracker/index.html')">📊 Yield Tracker</a>
+  </nav>
+  <iframe id="toolFrame" src="Universal-Instrument-Maker/instrument-maker.html"></iframe>
+  <footer>
+    Maintained by: watley: william-rayeh, Executor Fiduciary – AMPAM Minister of Foreign Affairs
+  </footer>
+</body>
+</html>
