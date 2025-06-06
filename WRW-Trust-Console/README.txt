@@ -1,0 +1,1 @@
+Drop all these files into your /WRW-Trust-Console/ GitHub folder. Re-link generatePDF() and generateQR() in your index.html for full activation.
