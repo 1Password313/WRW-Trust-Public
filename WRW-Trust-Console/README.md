@@ -1,2 +1,2 @@
 # WRW Creditor Console
-This console manages BOEs, Bonds, and Trust Ledger tools.
+Upload all files to /WRW-Trust-Console/ in your GitHub repo.

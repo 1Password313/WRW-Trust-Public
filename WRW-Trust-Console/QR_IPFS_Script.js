@@ -1,0 +1,1 @@
+// JS logic for QR code and IPFS integration

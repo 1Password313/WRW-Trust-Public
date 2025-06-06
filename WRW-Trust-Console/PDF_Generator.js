@@ -1,0 +1,1 @@
+// JS logic for PDF generation
