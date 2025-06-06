@@ -9,8 +9,35 @@
   <script src="Trust_Seal_Script.js" defer></script>
 </head>
 <body>
-<h1>Creditor Console (BOE/Bond/Note Generator)</h1>
-<div id='ledger'></div>
-<script src='Ledger_Engine.js'></script>
+  <h1>💼 WRW Creditor Console</h1>
+  <div class="console" style="max-width:700px; margin:auto; background:#222; padding:2em; border-radius:10px;">
+    <label>Instrument Type</label>
+    <select id="instrumentType">
+      <option>BOE</option>
+      <option>Bond</option>
+      <option>Promissory Note</option>
+    </select>
+
+    <label>Issuer</label>
+    <input type="text" id="issuer" placeholder="Enter Issuer Name" />
+
+    <label>Payee</label>
+    <input type="text" id="payee" placeholder="Enter Payee Name" />
+
+    <label>Amount</label>
+    <input type="number" id="amount" placeholder="Amount in USD" />
+
+    <label>Maturity Date</label>
+    <input type="date" id="maturity" />
+
+    <label>Terms / Notes</label>
+    <textarea id="terms" placeholder="Trust conditions, repayment terms, etc."></textarea>
+
+    <button onclick="generatePDF()">📄 Generate PDF</button>
+    <button onclick="generateQR()">🔗 Generate QR + IPFS</button>
+    <button onclick="addToLedger()">📚 Add to Ledger</button>
+  </div>
+
+  <script src="Ledger_Engine.js"></script>
 </body>
 </html>
