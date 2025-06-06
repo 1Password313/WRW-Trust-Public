@@ -1,52 +1,13 @@
-
+<!-- WRW Creditor Console with Live Ledger Display -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="UTF-8" />
-  <title>WRW Creditor Console</title>
-  <script src="PDF_Generator.js" defer></script>
-  <script src="QR_IPFS_Script.js" defer></script>
-  <script src="Ledger_Engine.js" defer></script>
-  <script src="OID_1041_Module.js" defer></script>
-  <script src="Form8281_Module.js" defer></script>
-  <script src="Uploader_Module.js" defer></script>
-  <script src="PIN_Auth.js" defer></script>
-  <script src="Email_Simulator.js" defer></script>
-  <style>
-    body { font-family: Arial; background: #111; color: gold; padding: 2em; }
-    h1 { text-align: center; }
-    .console { max-width: 800px; margin: auto; background: #222; padding: 2em; border-radius: 12px; }
-    label, input, select, textarea { display: block; margin-top: 10px; width: 100%; }
-    button { background: #b30000; color: #fff; padding: 10px 20px; margin-top: 20px; border: none; border-radius: 6px; cursor: pointer; }
-    .footer { margin-top: 3em; text-align: center; font-size: 0.9em; color: #888; }
-  </style>
+<meta charset='UTF-8'>
+<title>WRW Creditor Console</title>
 </head>
 <body>
-  <h1>💼 WRW Creditor Console</h1>
-  <div class="console">
-    <label>Instrument Type</label>
-    <select id="instrumentType">
-      <option>BOE</option>
-      <option>Bond</option>
-      <option>Promissory Note</option>
-    </select>
-    <label>Issuer</label>
-    <input type="text" id="issuer" placeholder="Enter Issuer Name" />
-    <label>Payee</label>
-    <input type="text" id="payee" placeholder="Enter Payee Name" />
-    <label>Amount (USD)</label>
-    <input type="number" id="amount" placeholder="Enter Amount" />
-    <label>Maturity Date</label>
-    <input type="date" id="maturity" />
-    <label>Terms & Notes</label>
-    <textarea id="terms" placeholder="Enter terms and performance notes"></textarea>
-    <button onclick="generatePDF()">📄 Generate PDF</button>
-    <button onclick="generateQR()">🔗 Generate QR + IPFS</button>
-    <button onclick="addToLedger()">📚 Add to Trust Ledger</button>
-    <button onclick="exportLedger()">📤 Export Ledger</button>
-  </div>
-  <div class="footer">
-    WILLIAM RAYEH WATLEY TRUST • LEI: 984500FFAO6C10CD8768 • Jurisdiction: AMPAM
-  </div>
+<h1>Creditor Console (BOE/Bond/Note Generator)</h1>
+<div id='ledger'></div>
+<script src='Ledger_Engine.js'></script>
 </body>
 </html>
