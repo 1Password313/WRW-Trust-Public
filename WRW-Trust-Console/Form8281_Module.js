@@ -1,1 +1,1 @@
-// IRS Form 8281 logic
+// 8281 Securities Registration module

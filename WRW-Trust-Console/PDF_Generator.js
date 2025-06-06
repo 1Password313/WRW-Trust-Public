@@ -1,1 +1,1 @@
-// JS logic for PDF generation
+// PDF generation logic will go here

@@ -1,1 +1,1 @@
-// File upload and attachment system
+// File upload module

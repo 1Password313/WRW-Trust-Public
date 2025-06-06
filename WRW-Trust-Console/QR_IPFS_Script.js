@@ -1,1 +1,1 @@
-// JS logic for QR code and IPFS integration
+// QR + IPFS logic placeholder

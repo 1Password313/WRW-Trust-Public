@@ -1,1 +1,1 @@
-// Simulated email/e-file submission
+// Email simulation logic for IRS submission

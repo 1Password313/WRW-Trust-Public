@@ -1,1 +1,1 @@
-// PIN lock and auth session logic
+// PIN locking mechanism

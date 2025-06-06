@@ -1,1 +1,1 @@
-// IRS Form OID/1041 generator
+// OID and 1041 Schedule B module placeholder
