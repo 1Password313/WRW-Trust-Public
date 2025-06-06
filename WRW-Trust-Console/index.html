@@ -4,7 +4,54 @@
 <head>
 <meta charset='UTF-8'>
 <title>WRW Creditor Console</title>
-<script src="PDF_Generator.js" defer></script>
+<style>
+  body {
+    font-family: Georgia, serif;
+    background: #f5f5f5;
+    color: #222;
+    padding: 2em;
+  }
+  .console {
+    background: #222;
+    color: #eee;
+    padding: 2em;
+    max-width: 700px;
+    margin: auto;
+    border-radius: 12px;
+  }
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  input, select, textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+  }
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  button {
+    margin-top: 15px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #45a049;
+  }
+</style>
+  <script src="PDF_Generator.js" defer></script>
   <script src="QR_IPFS_Script.js" defer></script>
   <script src="Trust_Seal_Script.js" defer></script>
 </head>
