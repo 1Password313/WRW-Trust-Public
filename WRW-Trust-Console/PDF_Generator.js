@@ -1,5 +1,4 @@
 
-// Generates a trust instrument PDF using HTML2PDF or jsPDF
 function generatePDF() {
   const type = document.getElementById('instrumentType').value;
   const issuer = document.getElementById('issuer').value;
@@ -7,13 +6,26 @@ function generatePDF() {
   const amount = document.getElementById('amount').value;
   const maturity = document.getElementById('maturity').value;
   const terms = document.getElementById('terms').value;
-  const output = `
-    WRW TRUST INSTRUMENT\n
-    Type: ${type}\nIssuer: ${issuer}\nPayee: ${payee}\nAmount: $${amount}\nMaturity: ${maturity}\n\nTerms:\n${terms}
+  const template = getInstrumentTemplate(type);
+  const affidavit = generateAffidavit(type, issuer, payee, amount);
+  const content = `
+    WILLIAM RAYEH WATLEY TRUST – ${type}
+    Issuer: ${issuer}
+    Payee: ${payee}
+    Amount: $${amount}
+    Maturity: ${maturity}
+
+    TERMS:
+    ${terms}
+
+    TEMPLATE:
+    ${template}
+
+    ${affidavit}
   `;
-  const blob = new Blob([output], { type: 'application/pdf' });
+  const blob = new Blob([content], { type: 'application/pdf' });
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
-  link.download = `WRW-${type}-${new Date().getFullYear()}.pdf`;
+  link.download = `WRW-${type}-${new Date().getFullYear()}-${Date.now().toString().slice(-4)}.pdf`;
   link.click();
 }
