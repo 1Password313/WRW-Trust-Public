@@ -1,0 +1,21 @@
+body {
+  font-family: Georgia, serif;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 2em;
+}
+form {
+  background: #fff;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  display: inline-block;
+  margin-top: 1em;
+}
+button {
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
